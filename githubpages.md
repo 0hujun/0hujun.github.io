@@ -19,3 +19,47 @@
 #### 关于发布
 
 直接使用actions workflow发布，如果使用Jekeyll，github会自动发布。
+
+### 2 使用Workflow
+
+#### Action
+
+[Checkout · Actions · GitHub Marketplace](https://github.com/marketplace/actions/checkout)
+
+
+
+一个例子
+
+```yaml
+name: Build Jekyll site
+on:
+ push:
+   branches: ["main"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build
+        uses: actions/jekyll-build-pages@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+```
+
