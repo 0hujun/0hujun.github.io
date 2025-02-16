@@ -1,3 +1,9 @@
+---
+permalink: /pages.html
+---
+
+
+
 # 如何使用Github Pages
 
 【2025-02-15】
@@ -6,7 +12,7 @@
 
 * 0hujun.github.com
 * [Quickstart for GitHub Pages - GitHub Docs](https://docs.github.com/en/pages/quickstart)
-* 
+* [欢迎 - Jekyll • 简单静态博客网站生成器](https://jekyllcn.com/docs/home/)
 
 ## 教程
 
@@ -20,13 +26,17 @@
 
 直接使用actions workflow发布，如果使用Jekeyll，github会自动发布。
 
-### 2 使用Workflow
+### 2 使用模板
+
+
+
+### 3 使用Workflow
 
 #### Action
 
 [Checkout · Actions · GitHub Marketplace](https://github.com/marketplace/actions/checkout)
 
-
+[Build Jekyll for GitHub Pages · Actions · GitHub Marketplace](https://github.com/marketplace/actions/build-jekyll-for-github-pages)
 
 一个例子
 
