@@ -73,3 +73,11 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 ```
 
+## 注意事项
+
+### 1 未解析转换文件
+
+[jekyll not generating index.html - Stack Overflow](https://stackoverflow.com/questions/26314435/jekyll-not-generating-index-html)
+
+在html中加入了liquid语法，但是Jekyll未解析。需要在html前加入yaml format格式。
+
