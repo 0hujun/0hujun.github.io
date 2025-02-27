@@ -1,6 +1,6 @@
 ---
+title: "github pages"
 permalink: /pages.html
-
 ---
 
 # 如何使用Github Pages
